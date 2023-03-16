@@ -45,8 +45,8 @@ public class MainAccounts {
     List<Account> result = new ArrayList<>(n);
     for (int k = 1; k <= n; ++k) {
       System.out.println("Введите данные учётной записи №" + k + ":");
-        result.add(readAccount(br));
-      }
+      result.add(readAccount(br));
+    }
     return result;
   }
 
@@ -58,7 +58,14 @@ public class MainAccounts {
     String name = br.readLine();
     System.out.print("Введите e-mail: ");
     String email = br.readLine();
-    return new Account(name, email);
+    Account account = null;
+    try {
+      account = new Account(name, email);
+    } catch (InvalidEmailExeption e) {
+      System.out.println("Не корректный ввод: " + e.getMessage());
+      System.exit(1);
+    }
+    return account;
   }
 }
 
