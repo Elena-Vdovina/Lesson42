@@ -14,6 +14,9 @@ public class Account {
   // если в переданном адресе электронной почты нет символа '@'.
   public Account(String name, String email) {
     this.name = name;
+    if (!email.contains("@")) {
+      throw new InvalidEmailExeption(email);
+    }
     this.email = email;
     reputation = 0;
   }
