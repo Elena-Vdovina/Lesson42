@@ -14,4 +14,9 @@ public class Rectangle {
     this.width=width;
   }
 
+  @Override
+  public String toString(){
+    return String.format("%s x %s", length, width);
+  }
+
 }
