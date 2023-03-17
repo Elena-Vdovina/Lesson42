@@ -5,5 +5,13 @@ package homework2;
 // класса "длина" и "ширина".
 public class Rectangle {
 
+  private final String length;
+
+  private final String width;
+
+  public Rectangle(String length, String width){
+    this.length=length;
+    this.width=width;
+  }
 
 }
