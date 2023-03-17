@@ -17,6 +17,12 @@ public class CompareRunner {
     Rectangle r1 = new Rectangle(l1, w1);
     Rectangle r2 = new Rectangle(l2, w2);
     Rectangle r3 = new Rectangle(w2, l2);
+    if (r1.equals(r3)) {
+      System.out.println("Прямоугольник " + r1.toString() + " == прямоугольнику " +
+          r2.toString() + "\n");
+    } else {
+      System.out.println("Прямоугольник " + r1.toString() + " != прямоугольнику " +
+          r2.toString() + "\n");
+    }
   }
-
 }
