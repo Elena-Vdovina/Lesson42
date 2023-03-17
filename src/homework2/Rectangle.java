@@ -29,4 +29,9 @@ public class Rectangle {
     }
     return this.length.equalsIgnoreCase(other.length) && this.width.equalsIgnoreCase(other.width);
   }
+
+  @Override
+  public int hashCode() {
+    return length.hashCode() * width.hashCode();
+  }
 }
