@@ -9,14 +9,24 @@ public class Rectangle {
 
   private final String width;
 
-  public Rectangle(String length, String width){
-    this.length=length;
-    this.width=width;
+  public Rectangle(String length, String width) {
+    this.length = length;
+    this.width = width;
   }
 
   @Override
-  public String toString(){
+  public String toString() {
     return String.format("%s x %s", length, width);
   }
 
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) {
+      return true;
+    }
+    if (!(obj instanceof Rectangle other)) {
+      return false;
+    }
+    return this.length.equalsIgnoreCase(other.length) && this.width.equalsIgnoreCase(other.width);
+  }
 }
