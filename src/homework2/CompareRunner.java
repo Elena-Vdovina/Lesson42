@@ -4,4 +4,8 @@ package homework2;
 // прямоугольники как геометрические фигуры равны - если их можно совместить, повернув и наложив
 // друг на друга.
 public class CompareRunner {
+  public static void main(String[] args) {
+
+  }
+
 }
